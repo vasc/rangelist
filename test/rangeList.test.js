@@ -93,6 +93,18 @@ test("removing a range in the middle of an existing range splits the existing on
   expect(rl.toString()).toBe("[1, 3) [5, 10)");
 });
 
+test("calling RangeList::print will print the list representation to the console", () => {
+  const spy = jest.spyOn(console, "log").mockImplementation();
+
+  rl.add([1, 5]);
+  rl.print();
+
+  expect(spy).toHaveBeenCalledTimes(1);
+  expect(spy).toHaveBeenLastCalledWith("[1, 5)");
+
+  spy.mockRestore();
+});
+
 test("task examples execute correctly", () => {
   expect(rl.ranges).toStrictEqual([]);
 
