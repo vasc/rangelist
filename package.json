@@ -1,14 +1,19 @@
 {
   "name": "rangelist",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "Utilities to operate on a list of non contiguous ranges",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vasc/rangelist.git"
+  },
+  "author": "Vasco Fernandes <vasco.box@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^6.8.0",
     "jest": "^25.3.0",
     "prettier": "^1.18.2"
   }
